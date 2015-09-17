@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" validUntil="2018-09-12T15:38:23Z"
+                     cacheDuration="PT1442504303S" entityID="http://sims.dbschenker.com/idp">
+    <md:IDPSSODescriptor WantAuthnRequestsSigned="false"
+                         protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+        <md:KeyDescriptor use="signing">
+            <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+                <ds:X509Data>
+                    <ds:X509Certificate>
+                        MIIDrTCCA2mgAwIBAgIJAIseKZ6C5ArUMAsGCWCGSAFlAwQDAjCBjTELMAkGA1UEBhMCREUxDDAKBgNVBAgMA05SVzEOMAwGA1UEBwwFRXNzZW4xFDASBgNVBAoMC1NjaGVua2VyIEFHMQ0wCwYDVQQLDARTSU1TMRcwFQYDVQQDDA5TSU1TLVNBTUwgMjAxNTEiMCAGCSqGSIb3DQEJARYTc2ltc0BkYnNjaGVua2VyLmNvbTAeFw0xNTA5MTAxNjA3NTJaFw0xNzA5MDkxNjA3NTJaMIGNMQswCQYDVQQGEwJERTEMMAoGA1UECAwDTlJXMQ4wDAYDVQQHDAVFc3NlbjEUMBIGA1UECgwLU2NoZW5rZXIgQUcxDTALBgNVBAsMBFNJTVMxFzAVBgNVBAMMDlNJTVMtU0FNTCAyMDE1MSIwIAYJKoZIhvcNAQkBFhNzaW1zQGRic2NoZW5rZXIuY29tMIIBtjCCASsGByqGSM44BAEwggEeAoGBAMW7RVcxNcYCO2wjKU4jLESZr0iNLwZvMhxM4ouTBYP5MiLUqgtXMC5weC43+VLmRWfT2SQDLoDdD5p/zQW8/Q2Oho1hXE/NJ1Ohb1yHjWCnQoz+8Q/ghd3WxDQka1YKJVzRccDD6Mhmfo/z6fuYF04YoKXWd0WjtlOZPMLaxfxHAhUA7yQku9FvdSU9kTk18Nnt21B8k1ECgYA46s3rwrA8SQflr2N0yWPatQbFAOf5nx12f6Oz1ioKvVC6mcZCMZLTV2GNCQ277WEghXRWqfpp8iTfT/OgEWhPNVvSQNGKLV6fp0YVRYwLOxTgTcvi9ljP4gifqYWyDfh5zOW62J2k3GcMFXQOs4kljLIKos6dSWVOyRnV0jtLLAOBhAACgYBfSuk9Nq2sn9YRSqnzbMDq6/V6ZWECJVXUi069HJBNNu7ZKQmnLspQuaQ64SY4oRw2yu5qWCZ5ZeNKcZ2YDIGYwXj+BgutkkCZXblaPM+cYE1E8qhEx/3hw5pfGCb97mP/YvNWnDaHpOu3DWtVEREHFygqlEm59aG5vfqSwOo6tqNQME4wHQYDVR0OBBYEFI+YwCAUe+8lxOPbi9p7+rshsWgoMB8GA1UdIwQYMBaAFI+YwCAUe+8lxOPbi9p7+rshsWgoMAwGA1UdEwQFMAMBAf8wCwYJYIZIAWUDBAMCAzEAMC4CFQCAaakQ4ND4rqnZLZabXlgBxrKbugIVANvZopYwN1L5ETDKeedmpWI17CX6
+                    </ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </md:KeyDescriptor>
+        <md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat>
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+                                Location="http://sims-ci.de.signintra.com/sims-auth/saml-sign-on"/>
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+                                Location="http://sims-ci.de.signintra.com/sims-auth/saml-sign-on"/>
+    </md:IDPSSODescriptor>
+    <md:Organization>
+        <md:OrganizationName xml:lang="en-US">Schenker AG</md:OrganizationName>
+        <md:OrganizationDisplayName xml:lang="en-US">Schenker AG</md:OrganizationDisplayName>
+        <md:OrganizationURL xml:lang="en-US">http://www.dbschenker.com</md:OrganizationURL>
+    </md:Organization>
+    <md:ContactPerson contactType="technical">
+        <md:GivenName>Till</md:GivenName>
+        <md:SurName>Kuhn</md:SurName>
+        <md:EmailAddress>till.kuhn@dbschenker.om</md:EmailAddress>
+    </md:ContactPerson>
+    <md:ContactPerson contactType="technical">
+        <md:GivenName>Zhenchao</md:GivenName>
+        <md:SurName>Wang</md:SurName>
+        <md:EmailAddress>mailto:eric-zz.wang@dbschenker.com</md:EmailAddress>
+    </md:ContactPerson>
+    <md:ContactPerson contactType="support">
+        <md:GivenName>SIMS Support</md:GivenName>
+        <md:EmailAddress>sims@dbschenker.om</md:EmailAddress>
+    </md:ContactPerson>
+
+</md:EntityDescriptor>
