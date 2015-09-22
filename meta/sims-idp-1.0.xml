@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" validUntil="2018-09-12T15:38:23Z"
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+                     validUntil="2018-09-12T15:38:23Z"
                      cacheDuration="PT1442504303S" entityID="http://sims.dbschenker.com/idp">
     <md:IDPSSODescriptor WantAuthnRequestsSigned="false"
                          protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
@@ -12,11 +13,14 @@
                 </ds:X509Data>
             </ds:KeyInfo>
         </md:KeyDescriptor>
-        <md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat>
+        <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+                                Location="http://sims-ci.de.signintra.com/sims-auth/saml-sign-out"/>
+        <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
         <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
                                 Location="http://sims-ci.de.signintra.com/sims-auth/saml-sign-on"/>
         <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
                                 Location="http://sims-ci.de.signintra.com/sims-auth/saml-sign-on"/>
+
     </md:IDPSSODescriptor>
     <md:Organization>
         <md:OrganizationName xml:lang="en-US">Schenker AG</md:OrganizationName>
