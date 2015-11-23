@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+                     validUntil="2018-09-12T15:38:23Z"
+                     cacheDuration="PT1442504303S" entityID="http://sims.dbschenker.com/idp">
+    <md:IDPSSODescriptor WantAuthnRequestsSigned="false"
+                         protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+        <md:KeyDescriptor use="signing">
+            <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+                <ds:X509Data>
+                    <ds:X509Certificate>
+                        MIICRDCCAa0CBFYTzi4wDQYJKoZIhvcNAQEFBQAwaTELMAkGA1UEBhMCREUxDDAKBgNVBAgMA05SVzEOMAwGA1UEBwwFRXNzZW4xFDASBgNVBAoMC1NjaGVua2VyIEFHMQ0wCwYDVQQLDARTSU1TMRcwFQYDVQQDDA5TSU1TLVNBTUwgMjAxNTAeFw0xNTEwMDYxMzM1NDJaFw0xNjEwMDUxMzM1NDJaMGkxCzAJBgNVBAYTAkRFMQwwCgYDVQQIDANOUlcxDjAMBgNVBAcMBUVzc2VuMRQwEgYDVQQKDAtTY2hlbmtlciBBRzENMAsGA1UECwwEU0lNUzEXMBUGA1UEAwwOU0lNUy1TQU1MIDIwMTUwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBANQ2XNY0Md6E3V10f1S+e5snL6H0Q9v2emZjYrIQGzppuOQlrFKIQ7QcHoDs0A65f4Wh4gpT88sya+aUkiH1NiKHXBqPD5ellFpkY/YOOrS2AtsslKbtKTQKVZE4g0fO9pqRdtUnh2bcVhxa8a6up1o08J4Az3yBMEsjSWfCURfvAgMBAAEwDQYJKoZIhvcNAQEFBQADgYEATNoPGaNUtkUcYCum4Ye6o4S4O5D5FKbPE9lJ1ykkbXx47YR9YMsw7FKdakRlM6CSE8o/PVXqaPr9uo9WNzq3yFQ2Fib6AjwzBVIwfwnzqSWWysnDsGlwX2tHBD8lLISQRRb9AjXbRLfmYfCDghwxh8PXmk01jTHS4XI4/q85Wr4=
+                    </ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </md:KeyDescriptor>
+        <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+                                Location="https://portal-fat.dc.signintra.com/sims-auth/saml-sign-out"/>
+        <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+                                Location="https://portal-fat.dc.signintra.com/sims-auth/saml-sign-on"/>
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+                                Location="https://portal-fat.dc.signintra.com/sims-auth/saml-sign-on"/>
+
+    </md:IDPSSODescriptor>
+    <md:Organization>
+        <md:OrganizationName xml:lang="en-US">Schenker AG</md:OrganizationName>
+        <md:OrganizationDisplayName xml:lang="en-US">Schenker AG</md:OrganizationDisplayName>
+        <md:OrganizationURL xml:lang="en-US">http://www.dbschenker.com</md:OrganizationURL>
+    </md:Organization>
+    <md:ContactPerson contactType="technical">
+        <md:GivenName>Till</md:GivenName>
+        <md:SurName>Kuhn</md:SurName>
+        <md:EmailAddress>till.kuhn@dbschenker.om</md:EmailAddress>
+    </md:ContactPerson>
+    <md:ContactPerson contactType="technical">
+        <md:GivenName>Zhenchao</md:GivenName>
+        <md:SurName>Wang</md:SurName>
+        <md:EmailAddress>mailto:eric-zz.wang@dbschenker.com</md:EmailAddress>
+    </md:ContactPerson>
+    <md:ContactPerson contactType="support">
+        <md:GivenName>SIMS Support</md:GivenName>
+        <md:EmailAddress>sims@dbschenker.om</md:EmailAddress>
+    </md:ContactPerson>
+
+</md:EntityDescriptor>
