@@ -14,12 +14,12 @@
             </ds:KeyInfo>
         </md:KeyDescriptor>
         <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
-                                Location="https://sims-rel.de.signintra.com/sims-auth/internal/saml-sign-out"/>
+                                Location="http://sims-rel.de.signintra.com/sims-auth/internal/saml-sign-out"/>
         <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
         <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
-                                Location="https://sims-rel.de.signintra.com/sims-auth/internal/saml-sign-on"/>
+                                Location="http://sims-rel.de.signintra.com/sims-auth/internal/saml-sign-on"/>
         <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
-                                Location="https://sims-rel.de.signintra.com/sims-auth/internal/saml-sign-on"/>
+                                Location="http://sims-rel.de.signintra.com/sims-auth/internal/saml-sign-on"/>
 
     </md:IDPSSODescriptor>
     <md:Organization>
