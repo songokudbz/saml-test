@@ -1,53 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  ~ Copyright 2016 Red Hat, Inc. and/or its affiliates
-  ~ and other contributors as indicated by the @author tags.
-  ~
-  ~ Licensed under the Apache License, Version 2.0 (the "License");
-  ~ you may not use this file except in compliance with the License.
-  ~ You may obtain a copy of the License at
-  ~
-  ~ http://www.apache.org/licenses/LICENSE-2.0
-  ~
-  ~ Unless required by applicable law or agreed to in writing, software
-  ~ distributed under the License is distributed on an "AS IS" BASIS,
-  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  ~ See the License for the specific language governing permissions and
-  ~ limitations under the License.
-  -->
+<EntityDescriptor entityID="https://login-int.signintra.com/auth/realms/master"
+                   xmlns="urn:oasis:names:tc:SAML:2.0:metadata"
+                   xmlns:dsig="http://www.w3.org/2000/09/xmldsig#"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <IDPSSODescriptor WantAuthnRequestsSigned="false"
+      protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+      <SingleLogoutService
+         Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+         Location="https://login-int.signintra.com/auth/realms/master/protocol/saml" />
+      <SingleLogoutService
+         Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+         Location="https://login-int.signintra.com/auth/realms/master/protocol/saml" />
+   <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</NameIDFormat>
+   <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</NameIDFormat>
+   <NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</NameIDFormat>
+   <NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</NameIDFormat>
 
-<EntitiesDescriptor Name="urn:keycloak" xmlns="urn:oasis:names:tc:SAML:2.0:metadata"
-					xmlns:dsig="http://www.w3.org/2000/09/xmldsig#">
-	<EntityDescriptor entityID="https://login-int.signintra.com/auth/realms/master">
-		<IDPSSODescriptor WantAuthnRequestsSigned="true"
-			protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
-                        <KeyDescriptor use="signing">
-                          <dsig:KeyInfo>
-                            <dsig:KeyName>zdJRM9IyjIbqYIvQzea5D10AjBrrG98Tl7VB8CPMqCA</dsig:KeyName>
-                            <dsig:X509Data>
-                              <dsig:X509Certificate>MIICmzCCAYMCBgFcFiRLWDANBgkqhkiG9w0BAQsFADARMQ8wDQYDVQQDDAZtYXN0ZXIwHhcNMTcwNTE3MTExOTU2WhcNMjcwNTE3MTEyMTM2WjARMQ8wDQYDVQQDDAZtYXN0ZXIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCFmkCY8GaZn7n2D7H9dJ8MZGBTTZw8DjIZfayIxFSG7nfY6trzMUW/f4uPHsGayfXSQUfcYfprBVn3Im5uAgkVxfUFlXT02B9I5x5FBB4tnNU8ECbqHXeSuyoZxkqwBAw8IuwBCGAItROpK6baLhO65GQQyTm8ZewakFWzxh5Ndzqg4ebFQQFL08sKAotFdRVHUqLlBLCFymUXKNI0/rtXIT4SsDC4YNtTQ8bt22V15lqKdpOSekPGkIHn6nN9hq8R1d2xA1AaV306ktKNUIOg9g5i4w3l02jJC6hR1Or8sRy8IKHc168mM8ipVJE7Ld3DEsD65Mo1mGLZQHaYcMvjAgMBAAEwDQYJKoZIhvcNAQELBQADggEBAAmxO3TcguXd0by9WbtIIS8efu92/ZRMSYJBE4/EargvzTHXke3GVLIPxExSILnFNycqSEku5Bhzu8yUU+tLFHiw2xJKlUW33GJGqr0e001xqnR5j7F6nLGXfu+GXD2W2JlGG2o8dj8TPwsX/R3g1qpZKnn1DVxSNjr2klCp3V98BPo9HudG2HDrbQ2Q1zRoYhZSs2GE2pMNGO+HqcLgEElTPygUGzVROOZNsSmWSxR74acLmXHbr5SVwox+xACyW7PrLngTi9E2EbeLXD+zvHqdlsKFncAxcX0ESbplMtRYfqpxe1t9LGIHCwk91jg/13oX5FQwZm4X5uvMGw7Pk8I=</dsig:X509Certificate>
-                            </dsig:X509Data>
-                          </dsig:KeyInfo>
-                        </KeyDescriptor>
-
-			<SingleLogoutService
-					Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
-					Location="https://login-int.signintra.com/auth/realms/master/protocol/saml" />
-			<SingleLogoutService
-					Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
-					Location="https://login-int.signintra.com/auth/realms/master/protocol/saml" />
-			<NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</NameIDFormat>
-			<NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</NameIDFormat>
-			<NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</NameIDFormat>
-			<NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</NameIDFormat>
-			<SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
-				Location="https://login-int.signintra.com/auth/realms/master/protocol/saml" />
-			<SingleSignOnService
-				Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
-				Location="https://login-int.signintra.com/auth/realms/master/protocol/saml" />
-			<SingleSignOnService
-				Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP"
-				Location="https://login-int.signintra.com/auth/realms/master/protocol/saml" />
-		</IDPSSODescriptor>
-	</EntityDescriptor>
-</EntitiesDescriptor>
+      <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+         Location="https://login-int.signintra.com/auth/realms/master/protocol/saml" />
+      <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+         Location="https://login-int.signintra.com/auth/realms/master/protocol/saml" />
+      <KeyDescriptor use="signing">
+        <dsig:KeyInfo>
+          <dsig:KeyName>zdJRM9IyjIbqYIvQzea5D10AjBrrG98Tl7VB8CPMqCA</dsig:KeyName>
+          <dsig:X509Data>
+            <dsig:X509Certificate>MIICmzCCAYMCBgFcFiRLWDANBgkqhkiG9w0BAQsFADARMQ8wDQYDVQQDDAZtYXN0ZXIwHhcNMTcwNTE3MTExOTU2WhcNMjcwNTE3MTEyMTM2WjARMQ8wDQYDVQQDDAZtYXN0ZXIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCFmkCY8GaZn7n2D7H9dJ8MZGBTTZw8DjIZfayIxFSG7nfY6trzMUW/f4uPHsGayfXSQUfcYfprBVn3Im5uAgkVxfUFlXT02B9I5x5FBB4tnNU8ECbqHXeSuyoZxkqwBAw8IuwBCGAItROpK6baLhO65GQQyTm8ZewakFWzxh5Ndzqg4ebFQQFL08sKAotFdRVHUqLlBLCFymUXKNI0/rtXIT4SsDC4YNtTQ8bt22V15lqKdpOSekPGkIHn6nN9hq8R1d2xA1AaV306ktKNUIOg9g5i4w3l02jJC6hR1Or8sRy8IKHc168mM8ipVJE7Ld3DEsD65Mo1mGLZQHaYcMvjAgMBAAEwDQYJKoZIhvcNAQELBQADggEBAAmxO3TcguXd0by9WbtIIS8efu92/ZRMSYJBE4/EargvzTHXke3GVLIPxExSILnFNycqSEku5Bhzu8yUU+tLFHiw2xJKlUW33GJGqr0e001xqnR5j7F6nLGXfu+GXD2W2JlGG2o8dj8TPwsX/R3g1qpZKnn1DVxSNjr2klCp3V98BPo9HudG2HDrbQ2Q1zRoYhZSs2GE2pMNGO+HqcLgEElTPygUGzVROOZNsSmWSxR74acLmXHbr5SVwox+xACyW7PrLngTi9E2EbeLXD+zvHqdlsKFncAxcX0ESbplMtRYfqpxe1t9LGIHCwk91jg/13oX5FQwZm4X5uvMGw7Pk8I=</dsig:X509Certificate>
+          </dsig:X509Data>
+        </dsig:KeyInfo>
+      </KeyDescriptor>
+   </IDPSSODescriptor>
+</EntityDescriptor>
